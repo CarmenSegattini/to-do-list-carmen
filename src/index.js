@@ -8,6 +8,13 @@ const CHECK = "fa-check-circle";
 const UNCHECK = "fa-circle-thin";
 const LINE_TROUGH = "linetrough";
 
+// show todays date
+const options = {weekday : "long", month : "short", day : "numeric"};
+const today = new Date();
+
+document.getElementById("date").innerHTML = today.toLocaleDateString("en-US",options);
+
+
 // variables
 let LIST, id;
 

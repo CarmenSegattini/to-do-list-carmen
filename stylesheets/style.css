@@ -89,7 +89,7 @@ body {
 .header {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     width: 100%;
 }
@@ -101,6 +101,11 @@ body {
     width: 100%;
     height: 100%;
     margin-top: 1em;
+}
+
+
+#date {
+    padding-left: 0.5em;
 }
 
 .item {
@@ -122,6 +127,10 @@ body {
     width: 100%;
     padding-left: 1em;
     align-items: center;
+}
+
+.delete-all {
+    font-size: 1em;
 }
 
 /*styling the to do list*/
