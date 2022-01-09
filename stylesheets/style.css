@@ -1,69 +1,165 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-/*
-  2. Remove default margin
-*/
+/*defining the basic styling elements*/
+
 * {
-	margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-/*
-  3. Allow percentage-based heights in the application
-*/
-html,
+
+:root {
+--clr-Black: #2b2b2b;
+--clr-Creamy-Peach: #FAA99D;
+--clr-Milky-Yellow: #FDDF7E;
+--clr-white: #ffffff;
+--clr-grey: #f0f0f8;
+}
+
+html {
+    font-size: 16px;
+    font-family: "karla", sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--clr-black);
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--clr-black);
+}
+
+p {
+    font-size: 1.5em;
+    color: var(--clr-black)
+}
+
+.highlight_pink {
+    background: linear-gradient(120deg, #F6A5EB 0%, #F6A5EB 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-position: 0 60%;
+  }
+
+  .highlight_mint {
+    background: linear-gradient(120deg, #9BFBE1 0%, #9BFBE1 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-position: 0 60%;
+  }
+
+/* Setting up the page structure & design */
+
 body {
-	height: 100%;
+    background-color: var(--clr-grey);
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
-body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+
+.sheet {
+    background-color: var(--clr-white);
+    border-radius: 1em;
+    width: 70%;
+    height: 90%;
+    margin: 5%;
+    padding: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
-/*
-  6. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
+
+.container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    height: 95vh;
+    min-height: 325px; 
+    max-height:570px; 
 }
-/*
-  7. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-	font: inherit;
+
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
-/*
-  8. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
+
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
 }
-/*
-  9. Create a root stacking context
-*/
-#root,
-#__next {
-	isolation: isolate;
+
+.item {
+    display: flex;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    flex-grow: 4;
+    align-items: center;
+}
+
+#list {
+    width: 100%;
+}
+
+.list-alignment {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 1em;
+    align-items: center;
+}
+
+/*styling the to do list*/
+
+.add-item {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 5em;
+    align-items: center;
+    padding: 0.5em;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+#item {
+    flex-grow: 4;
+    margin-left: 0.5em;
+    height: 2em;
+    padding-left: 0.5em;
+    font-size: 20px;
+    font-family: "karla", sans-serif;
+    border: 1px dashed #6b6b6b;
+    border-radius: 2px;
+}
+
+#item:focus {
+    outline: none;
+}
+
+
+/*styling the font awesome elements */
+
+.fa-refresh {
+    color: var(--clr-Black)
+}
+
+
+.linetrough {
+    text-decoration: line-through;
+    color : #ccc;
 }

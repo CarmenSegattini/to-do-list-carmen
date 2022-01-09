@@ -4,15 +4,41 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="./stylesheets/style.css
-  "
-		/>
-		<title>Document</title>
+		<link rel="stylesheet" href="./stylesheets/style.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+ 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 		<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+		<title>To do List - Carmen</title>
 	</head>
 	<body>
-		<h1>Hello</h1>
-		<script src="main.js"></script>
+		<div class="sheet">
+			<div class="container">
+				<div class="header">
+					<h1> <span class="highlight_pink">To do </span> for today</h1>
+					<div class="clear">
+						<i class="fa fa-refresh fa-lg" aria-hidden="false"></i>
+					</div>
+				</div>
+				<div class="content">
+					<ul id="list">
+						<!-- 
+						<li class="item">
+							<i class="fa fa-circle-thin" job="complete" id="0"></i>
+							<div class="list-alignment">
+								<p class="text">Drink Coffee</p>
+								<i class="fa fa-trash-o de fa-2x" job="delete" id="0"></i>
+							</div>
+						</li>
+						-->
+					</ul>
+				</div>
+				<div class="add-item">
+					<i class="fa fa-plus-circle fa-2x" aria-hidden="false"></i>
+					<input type="text" id="item" placeholder="Add a to-do">
+				</div>
+			</div>
+		</div>
+		<script src="/src/index.js"></script>
 	</body>
 </html>
