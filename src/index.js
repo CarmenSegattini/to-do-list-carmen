@@ -91,6 +91,7 @@ document.addEventListener("keyup",function(event){
     }
 });
 
+
 // complete to do
 function completeToDo (element) {
     element.classList.toggle(CHECK);
